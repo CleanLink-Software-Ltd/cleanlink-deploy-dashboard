@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CleanLink Deployments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      margin: 2rem auto; max-width: 1100px; padding: 0 1rem;
+    }
+    h1 { font-size: 1.4rem; margin: 0 0 0.25rem; }
+    .updated { color: #888; font-size: 0.85rem; margin-bottom: 1.5rem; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 0.55rem 0.75rem; text-align: left; border-bottom: 1px solid #e5e5e5; font-size: 0.9rem; vertical-align: middle; }
+    th { background: rgba(0,0,0,0.04); font-weight: 600; }
+    .repo { font-weight: 600; }
+    .sha { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8rem; color: inherit; text-decoration: none; }
+    .sha:hover { text-decoration: underline; }
+    .status { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 3px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; }
+    .status.success { background: #d4edda; color: #155724; }
+    .status.failure, .status.error { background: #f8d7da; color: #721c24; }
+    .status.in_progress, .status.pending, .status.queued { background: #fff3cd; color: #856404; }
+    .status.inactive, .status.none { background: #ececec; color: #777; }
+    .age { color: #888; font-size: 0.78rem; margin-left: 0.4rem; }
+    .creator { color: #888; font-size: 0.78rem; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #161616; color: #eee; }
+      th { background: rgba(255,255,255,0.06); }
+      th, td { border-color: #2a2a2a; }
+    }
+  </style>
+</head>
+<body>
+  <h1>CleanLink Deployments</h1>
+  <div class="updated" id="updated">Loading…</div>
+  <table>
+    <thead>
+      <tr><th>Repo</th><th>Dev</th><th>Prod</th></tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <script>
+    function timeAgo(iso) {
+      if (!iso) return "";
+      const s = (Date.now() - new Date(iso).getTime()) / 1000;
+      if (s < 60) return Math.floor(s) + "s ago";
+      if (s < 3600) return Math.floor(s / 60) + "m ago";
+      if (s < 86400) return Math.floor(s / 3600) + "h ago";
+      return Math.floor(s / 86400) + "d ago";
+    }
+
+    function cell(d) {
+      if (!d || d.status === "none") {
+        return '<span class="status none">never</span>';
+      }
+      const sha = d.sha
+        ? `<a class="sha" href="https://github.com/${d.repo}/commit/${d.sha}" target="_blank" rel="noopener">${d.sha.slice(0, 7)}</a>`
+        : "";
+      const creator = d.creator ? ` <span class="creator">by ${d.creator}</span>` : "";
+      return `<span class="status ${d.status}">${d.status}</span> ${sha}<span class="age">${timeAgo(d.created_at)}</span>${creator}`;
+    }
+
+    fetch("data.json", { cache: "no-store" })
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById("updated").textContent =
+          "Updated " + timeAgo(data.updated_at) + " (" + data.updated_at + ")";
+
+        const byRepo = {};
+        for (const d of data.deployments) {
+          const name = d.repo.split("/")[1];
+          if (!byRepo[name]) byRepo[name] = { dev: null, prod: null };
+          byRepo[name][d.environment] = d;
+        }
+
+        const rows = Object.entries(byRepo)
+          .sort(([a], [b]) => a.localeCompare(b))
+          .map(([name, envs]) =>
+            `<tr><td class="repo">${name}</td><td>${cell(envs.dev)}</td><td>${cell(envs.prod)}</td></tr>`
+          )
+          .join("");
+
+        document.getElementById("rows").innerHTML = rows;
+      })
+      .catch(err => {
+        document.getElementById("updated").textContent = "Failed to load data.json: " + err;
+      });
+  </script>
+</body>
+</html>
