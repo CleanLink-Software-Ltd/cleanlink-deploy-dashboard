@@ -10,6 +10,7 @@ REPOS=(
   "CleanLink-Software-Ltd/aws-clean-link-parser"
   "CleanLink-Software-Ltd/portal-api"
   "CleanLink-Software-Ltd/portal-api-infra"
+  "CleanLink-Software-Ltd/pt"
 )
 ENVIRONMENTS=(dev prod)
 
