@@ -11,6 +11,7 @@ REPOS=(
   "CleanLink-Software-Ltd/portal-api"
   "CleanLink-Software-Ltd/portal-api-infra"
   "CleanLink-Software-Ltd/pt"
+  "CleanLink-Software-Ltd/ng-pt-v3"
 )
 ENVIRONMENTS=(dev prod)
 
