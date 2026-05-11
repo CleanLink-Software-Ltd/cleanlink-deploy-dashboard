@@ -24,7 +24,11 @@ for repo in "${REPOS[@]}"; do
       id=$(echo "$deployment" | jq -r '.id')
       sha=$(echo "$deployment" | jq -r '.sha')
       status=$(gh api "/repos/$repo/deployments/$id/statuses?per_page=1" --jq '.[0].state // "pending"' 2>/dev/null || echo "pending")
-      author=$(gh api "/repos/$repo/commits/$sha" --jq '.author.login // .commit.author.name // empty' 2>/dev/null || true)
+      if author=$(gh api "/repos/$repo/commits/$sha" --jq '.author.login // .commit.author.name // empty' 2>/dev/null); then
+        :
+      else
+        author=""
+      fi
       entry=$(echo "$deployment" | jq \
         --arg env "$env" \
         --arg repo "$repo" \
