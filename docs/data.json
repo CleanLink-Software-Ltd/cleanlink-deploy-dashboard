@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T13:14:50Z",
+  "updated_at": "2026-06-13T15:14:06Z",
   "deployments": [
     {
       "repo": "CleanLink-Software-Ltd/process-portal",
@@ -94,9 +94,9 @@
     {
       "repo": "CleanLink-Software-Ltd/aws-clean-link-parser",
       "environment": "dev",
-      "sha": "5771b411f6e6e64e13a13d3ed813230c28c0fb23",
+      "sha": "2ec1dc73f6996eac33cafe4801c857e6cc53739f",
       "ref": "dev",
-      "created_at": "2026-05-02T16:13:44Z",
+      "created_at": "2026-06-13T14:55:02Z",
       "creator": "berrymat",
       "status": "success"
     },
