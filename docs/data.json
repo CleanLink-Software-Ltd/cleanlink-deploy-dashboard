@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05T19:51:22Z",
+  "updated_at": "2026-08-05T21:13:14Z",
   "deployments": [
     {
       "repo": "CleanLink-Software-Ltd/process-portal",
@@ -112,11 +112,11 @@
     {
       "repo": "CleanLink-Software-Ltd/portal-api",
       "environment": "dev",
-      "sha": "665aeae8b429d39efb1b8db9a37b98d1d1bb701f",
+      "sha": "eca8c0dd693cdabe074b3f3a34df6038b0547573",
       "ref": "dev",
-      "created_at": "2026-08-05T13:07:54Z",
+      "created_at": "2026-08-05T21:10:31Z",
       "creator": "reindweller",
-      "status": "success"
+      "status": "in_progress"
     },
     {
       "repo": "CleanLink-Software-Ltd/portal-api",
@@ -166,9 +166,9 @@
     {
       "repo": "CleanLink-Software-Ltd/ng-pt-v3",
       "environment": "dev",
-      "sha": "8114385ed01393b3ca5a5d8dde4708ef4138eec8",
+      "sha": "4d59531afa1489e3b6b4b6cbb8475de89e141da7",
       "ref": "dev",
-      "created_at": "2026-08-05T17:24:53Z",
+      "created_at": "2026-08-05T19:56:16Z",
       "creator": "arvinmacaso",
       "status": "success"
     },
