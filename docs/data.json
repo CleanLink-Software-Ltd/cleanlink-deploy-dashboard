@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T06:44:08Z",
+  "updated_at": "2026-10-09T13:50:56Z",
   "deployments": [
     {
       "repo": "CleanLink-Software-Ltd/process-portal",
@@ -148,9 +148,9 @@
     {
       "repo": "CleanLink-Software-Ltd/pt",
       "environment": "dev",
-      "sha": "f999ec4f2ba3148fce68b0012773fd6fc4e85ce5",
-      "ref": "dev",
-      "created_at": "2026-10-08T18:09:09Z",
+      "sha": "b39661fffbc3a51166c0b6a5974a83633da4679d",
+      "ref": "feat/mobile-call-logging",
+      "created_at": "2026-10-09T12:22:47Z",
       "creator": "berrymat",
       "status": "success"
     },
@@ -166,9 +166,9 @@
     {
       "repo": "CleanLink-Software-Ltd/ng-pt-v3",
       "environment": "dev",
-      "sha": "c12b86e7b9d51ba1654fb8503e0d3ec1cd48f8c0",
+      "sha": "15e963b35f1faad31f6cf9385c4d9fe363e5f73e",
       "ref": "dev",
-      "created_at": "2026-10-09T02:44:15Z",
+      "created_at": "2026-10-09T13:02:41Z",
       "creator": "berrymat",
       "status": "success"
     },
