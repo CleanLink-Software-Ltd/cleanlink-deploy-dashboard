@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T08:58:51Z",
+  "updated_at": "2026-10-29T16:00:02Z",
   "deployments": [
     {
       "repo": "CleanLink-Software-Ltd/process-portal",
@@ -112,10 +112,10 @@
     {
       "repo": "CleanLink-Software-Ltd/portal-api",
       "environment": "dev",
-      "sha": "c3c35a94f8f77afa75eabe63d71d180fbb05fa34",
+      "sha": "4aa697c3ccbc32c629296aa6cff83aadf782c7f3",
       "ref": "dev",
-      "created_at": "2026-10-29T04:59:13Z",
-      "creator": "louismarcel-tan",
+      "created_at": "2026-10-29T14:46:11Z",
+      "creator": "reindweller",
       "status": "success"
     },
     {
@@ -130,9 +130,9 @@
     {
       "repo": "CleanLink-Software-Ltd/portal-api-infra",
       "environment": "dev",
-      "sha": "518d928e6fab521fa4a5a7414d453819863016f3",
+      "sha": "e2c95a0741140473219948a6b65d18af60c178ea",
       "ref": "dev",
-      "created_at": "2026-10-27T15:47:52Z",
+      "created_at": "2026-10-29T11:35:11Z",
       "creator": "berrymat",
       "status": "success"
     },
@@ -166,10 +166,10 @@
     {
       "repo": "CleanLink-Software-Ltd/ng-pt-v3",
       "environment": "dev",
-      "sha": "dff0b3630a5856b9791288d3d8037da641eef5db",
+      "sha": "7de3d42acab518a2b3ae3a7f5c40ab42f5843217",
       "ref": "dev",
-      "created_at": "2026-10-29T02:35:33Z",
-      "creator": "berrymat",
+      "created_at": "2026-10-29T14:48:40Z",
+      "creator": "arvinmacaso",
       "status": "success"
     },
     {
