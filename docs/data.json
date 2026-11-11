@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T23:31:12Z",
+  "updated_at": "2026-11-11T02:59:43Z",
   "deployments": [
     {
       "repo": "CleanLink-Software-Ltd/process-portal",
@@ -58,9 +58,9 @@
     {
       "repo": "CleanLink-Software-Ltd/aws-clean-link-summer",
       "environment": "dev",
-      "sha": "8ba52ef193442748df0fc5baa03b61bc101e0b05",
+      "sha": "01989e95a69d2d61ed548cec5db9deff8050f7c1",
       "ref": "dev",
-      "created_at": "2026-05-02T16:16:19Z",
+      "created_at": "2026-11-10T23:38:49Z",
       "creator": "berrymat",
       "status": "success"
     },
@@ -76,9 +76,9 @@
     {
       "repo": "CleanLink-Software-Ltd/aws-clean-link-stock-summer",
       "environment": "dev",
-      "sha": "af89d5a7574de32e9b3fdd3764a38ae09999b2a4",
+      "sha": "3aaef8afd71812163174270a559a59fec91091d6",
       "ref": "dev",
-      "created_at": "2026-05-02T16:15:01Z",
+      "created_at": "2026-11-10T23:38:53Z",
       "creator": "berrymat",
       "status": "success"
     },
@@ -94,9 +94,9 @@
     {
       "repo": "CleanLink-Software-Ltd/aws-clean-link-parser",
       "environment": "dev",
-      "sha": "1c946f5f70bf80a6c8adb0ca3f361508f17a8607",
+      "sha": "5615de18483349981315e2dcc5fab946f0eac7a3",
       "ref": "dev",
-      "created_at": "2026-09-29T13:59:06Z",
+      "created_at": "2026-11-10T23:38:44Z",
       "creator": "berrymat",
       "status": "success"
     },
@@ -112,10 +112,10 @@
     {
       "repo": "CleanLink-Software-Ltd/portal-api",
       "environment": "dev",
-      "sha": "79c5a6bfc3972facb957e779669d5d207e834f69",
+      "sha": "595ba029b1c9a400630a581220cd42e65ab3632d",
       "ref": "dev",
-      "created_at": "2026-11-10T15:40:05Z",
-      "creator": "reindweller",
+      "created_at": "2026-11-10T23:44:40Z",
+      "creator": "berrymat",
       "status": "success"
     },
     {
