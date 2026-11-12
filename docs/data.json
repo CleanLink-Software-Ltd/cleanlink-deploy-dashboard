@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T07:46:55Z",
+  "updated_at": "2026-11-12T16:21:01Z",
   "deployments": [
     {
       "repo": "CleanLink-Software-Ltd/process-portal",
@@ -112,10 +112,10 @@
     {
       "repo": "CleanLink-Software-Ltd/portal-api",
       "environment": "dev",
-      "sha": "306056b76c71f9c9acc5b5c6d1cc2538b4969444",
+      "sha": "979ec0853da206c6587393cdabfe144963220678",
       "ref": "dev",
-      "created_at": "2026-11-11T16:04:58Z",
-      "creator": "reindweller",
+      "created_at": "2026-11-12T15:31:12Z",
+      "creator": "louismarcel-tan",
       "status": "success"
     },
     {
@@ -130,9 +130,9 @@
     {
       "repo": "CleanLink-Software-Ltd/portal-api-infra",
       "environment": "dev",
-      "sha": "f5c017473f328600926e3b60e0161a9d5344ba21",
+      "sha": "203e72c11b5d7232ec9527cc000d0fc010718c76",
       "ref": "dev",
-      "created_at": "2026-11-12T03:07:23Z",
+      "created_at": "2026-11-12T14:22:29Z",
       "creator": "berrymat",
       "status": "success"
     },
@@ -148,9 +148,9 @@
     {
       "repo": "CleanLink-Software-Ltd/pt",
       "environment": "dev",
-      "sha": "3cb95b6843525c642275d603f8b8e9770efe0f72",
-      "ref": "dev",
-      "created_at": "2026-11-12T03:16:20Z",
+      "sha": "558b0052391c061137526f86dd3cd5ef7eda1ccc",
+      "ref": "feat/app-secrets-from-ssm",
+      "created_at": "2026-11-12T14:24:01Z",
       "creator": "berrymat",
       "status": "success"
     },
@@ -166,10 +166,10 @@
     {
       "repo": "CleanLink-Software-Ltd/ng-pt-v3",
       "environment": "dev",
-      "sha": "43092474b5446986159fbba13daafafcb58d9b42",
+      "sha": "44317e69f7bf47bc7d95aa9d54c6289a5294ca33",
       "ref": "dev",
-      "created_at": "2026-11-11T15:58:01Z",
-      "creator": "arvinmacaso",
+      "created_at": "2026-11-12T11:18:43Z",
+      "creator": "louismarcel-tan",
       "status": "success"
     },
     {
